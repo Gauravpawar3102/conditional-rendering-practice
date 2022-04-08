@@ -28,7 +28,13 @@ function App() {
       {!showEvents && (
         <button onClick={() => setShowEvents(true)}>show Events</button>
       )}
-      {showEvents && <EventList events={events} handleClick={handleClick} />}
+      {showEvents && (
+        <EventList
+          events={events}
+          handleClick={handleClick}
+          isSalesModal={false}
+        />
+      )}
       {showEvents && (
         <button onClick={() => setShowEvents(false)}>Hide Events</button>
       )}
